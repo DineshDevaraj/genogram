@@ -1,0 +1,94 @@
+create (gnb {name:"Ganga Naidu's Baba"})
+create gnb-[:son{crono:1,rel:'father'}]->({name:'Nainda Naidu'})
+create gnb-[:son{crono:2,rel:'father'}]->({name:'Ganga Naidu'})
+create gnb-[:doughter{crono:3,rel:'father'}]->({name:'Akkammal'})
+create gnb-[:doughter{crono:4,rel:'father'}]->({name:'Velai Ammal'})
+create gnb-[:doughter{crono:5,rel:'father'}]->({name:'Yellammal'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start nn=node(2), gn=node(3), ak=node(4), va=node(5), yl=node(6)
+
+create nn-[:son{crono:1,rel:'father'}]->({name:'Ganga Naidu'})
+create nn-[:doughter{crono:2,rel:'father'}]->({name:'Sarasvathi'})
+
+create gn-[:son{crono:1,rel:'son'}]->({name:'Chandra Sekaran'})
+create gn-[:doughter{crono:2,rel:'father'}]->({name:'Poongothai', alias:'Baby'})
+create gn-[:doughter{crono:3,rel:'father'}]->({name:'Thilothamai', alias:'Bama'})
+create gn-[:doughter{crono:4,rel:'father'}]->({name:'Mani'})
+
+create ak-[:doughter{crono:1,rel:'mother'}]->({name:'Papayammal'})
+create ak-[:son{crono:2,rel:'mother'}]->({name:'Srinivasan'})
+create ak-[:son{crono:3,rel:'mother'}]->({name:'Ganesan'})
+create ak-[:son{crono:4,rel:'mother'}]->({name:'Natraj'})
+
+create va-[:doughter{crono:1,rel:'mother'}]->({name:'Alamelu'})
+create va-[:son{crono:2,rel:'mother'}]->({name:'Krishnamoorthy'})
+
+create yl-[:doughter{crono:1,rel:'mother'}]->({name:'Prema'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start gn=node(7), sarasu=node(8)
+create gn-[:son{crono:1,rel:'father'}]->({name:'Devaraj'})
+create gn-[:son{crono:2,rel:'father'}]->({name:'Parimalan'})
+create sarasu-[:son{crono:1,rel:'mother'}]->({name:'Revigobal'})
+create sarasu-[:doughter{crono:2,rel:'mother'}]->({name:'Rani'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start cs=node(9), pg=node(10), th=node(11), mani=node(12)
+create cs-[:son{crono:1,rel:'father'}]->({name:'Sivakumar', alias:'Prabhakar'})
+create cs-[:doughter{crono:2,rel:'father'}]->({name:'Gomathi'})
+create pg-[:son{crono:1,rel:'mother'}]->({name:'Ramesh'})
+create th-[:son{crono:1,rel:'mother'}]->({name:'Arivarasu'})
+create th-[:doughter{crono:2,rel:'mother'}]->({name:'Jansi Rani'})
+create mani-[:son{crono:1,rel:'mother'}]->({name:'Ravi'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start dr=node(20), pr=node(21), rg=node(22), rn=node(23)
+create dr-[:son{crono:1,rel:'father'}]->({name:'Dinesh'})
+create pr-[:son{crono:1,rel:'father'}]->({name:'Vasanth'})
+create rg-[:doughter{crono:1,rel:'father'}]->({name:'Ramya'})
+create rg-[:son{crono:2,rel:'father'}]->({name:'Sabari'})
+create rn-[:son{crono:1,rel:'mother'}]->({name:'Sathish'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start sk=node(24), go=node(25), rm=node(26), av=node(27), jr=node(28)
+create sk-[:doughter{crono:1,rel:'father'}]->({name:'Vaishaly'})
+create sk-[:doughter{crono:2,rel:'father'}]->({name:'Varnika'})
+create go-[:son{crono:1,rel:'mother'}]->({name:'Vigneshwaar'})
+create go-[:son{crono:2,rel:'mother'}]->({name:'Viswesswaar'})
+create rm-[:son{crono:1,rel:'father'}]->({name:'Shoban'})
+create rm-[:doughter{crono:2,rel:'father'}]->({name:'Shobana'})
+create av-[:son{crono:1,rel:'father'}]->({name:'Sankar'})
+create av-[:son{crono:2,rel:'father'}]->({name:'Surya'})
+create jr-[:son{crono:1,rel:'mother'}]->({name:'Azhagia Nambi'})
+create jr-[:son{crono:2,rel:'mother'}]->({name:'Asok Kumar'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//	Need to fill with the Rakkipillar
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+create (ksn{name:'Kuppusamy Naidu'})
+create ksn-[:son{crono:1,rel:'father'}]->({name:'Varatharaja Naidu'})
+create ksn-[:doughter{crono:2,rel:'father'}]->({name:'Varathammal'})
+create ksn-[:doughter{crono:3,rel:'father'}]->({name:'To Find'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start th=node(11), vn=node(46), va=node(47), tf=node(48)
+match th-[r:son]->sn, th-[d:doughter]->dt
+create vn-[:wife{crono:1,rel:'husband'}]->th
+create vn-[:doughter{crono:d.crono,rel:d.rel}]->dt
+
+
+
+
+
+
+
+
+

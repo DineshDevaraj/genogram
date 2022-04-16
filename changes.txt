@@ -1,0 +1,1 @@
+1. made changed to elements.css to remove the style formating for readonly elements | 2. implemented date picker for birth date in info panel on loaduser.js | 3. included styling for enabled datepicker class that changes the cursor when enabled |

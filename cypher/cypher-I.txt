@@ -1,0 +1,139 @@
+create (gnb {name:"Ganga Naidu's Baba"})
+create (gna {name:"Ganga Naidu's Aya"})
+create (bva {name:'pair'})
+create gnb-[:wife{crono:1,rel:'husband'}]->bva
+create gna-[:husband{crono:1,rel:'wife'}]->bva
+create bva-[:son{crono:1,rel:'father'}]->({name:'Nainda Naidu'})
+create bva-[:son{crono:2,rel:'father'}]->({name:'Ganga Naidu'})
+create bva-[:doughter{crono:3,rel:'father'}]->({name:'Akkammal'})
+create bva-[:doughter{crono:4,rel:'father'}]->({name:'Velai Ammal'})
+create bva-[:doughter{crono:5,rel:'father'}]->({name:'Yellammal'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start nn=node(4), gn=node(5), ak=node(6), va=node(7), yl=node(8)
+
+create (nnw{name:"Thummai Ammal"})
+create (nvw{name:'pair'})
+create nn-[:wife{crono:1,rel:'husband'}]->nvw
+create nnw-[:husband{crono:1,rel:'wife'}]->nvw
+create nvw-[:son{crono:1,rel:'father'}]->({name:'Ganga Naidu'})
+create nvw-[:doughter{crono:2,rel:'father'}]->({name:'Sarasvathi'})
+
+create (gnw{name:"Ganga Naidu's Pair"})
+create (gvw{name:"pair"})
+create gn-[:wife{crono:1,rel:'husband'}]->gvw
+create gnw-[:husband{crono:1,rel:'wife'}]->gvw
+create gvw-[:son{crono:1,rel:'son'}]->({name:'Chandra Sekaran'})
+create gvw-[:doughter{crono:2,rel:'father'}]->({name:'Poongothai', alias:'Baby'})
+create gvw-[:doughter{crono:3,rel:'father'}]->({name:'Thilothamai', alias:'Bama'})
+create gvw-[:doughter{crono:4,rel:'father'}]->({name:'Mani'})
+
+create (akh{name:"Akkammal's Pair"})
+create (avh{name:'pair'})
+create akh-[:wife{crono:1,rel:'husband'}]->avh
+create ak-[:husband{crono:1,rel:'wife'}]->avh
+create avh-[:doughter{crono:1,rel:'mother'}]->({name:'Papayammal'})
+create avh-[:son{crono:2,rel:'mother'}]->({name:'Srinivasan'})
+create avh-[:son{crono:3,rel:'mother'}]->({name:'Ganesan'})
+create avh-[:son{crono:4,rel:'mother'}]->({name:'Natraj'})
+
+create (vah{name:"Velai Ammal's Pair"})
+create (vvh{name:'pair'})
+create vah-[:wife{crono:1,rel:'husband'}]->vvh
+create va-[:husband{crono:1,rel:'wife'}]->vvh
+create vvh-[:doughter{crono:1,rel:'mother'}]->({name:'Alamelu'})
+create vvh-[:son{crono:2,rel:'mother'}]->({name:'Krishnamoorthy'})
+
+create (ylh{name:"Yellammal's Pair"})
+create (yvh{name:'pair'})
+create ylh-[:wife{crono:1,rel:'husband'}]->yvh
+create yl-[:husband{crono:1,rel:'wife'}]->yvh
+create yvh-[:doughter{crono:1,rel:'mother'}]->({name:'Prema'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start gn=node(11), s=node(12)
+
+create (gvw{name:'pair'})
+create (gnw{name:'Nachai Ammal'})
+create gn-[:wife{crono:1,rel:'husband'}]->gvw
+create gnw-[:husband{crono:1,rel:'wife'}]->gvw
+create gvw-[:son{crono:1,rel:'father'}]->({name:'Devaraj'})
+create gvw-[:son{crono:2,rel:'father'}]->({name:'Parimalan'})
+
+create (svh{name:'pair'})
+create (sh{name:"Sarasvathi's Pair"})
+create sh-[:wife{crono:1,rel:'husband'}]->svh
+create s-[:husband{crono:1,rel:'wife'}]->svh
+create svh-[:son{crono:1,rel:'mother'}]->({name:'Revigobal'})
+create svh-[:doughter{crono:2,rel:'mother'}]->({name:'Rani'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start cs=node(15), pg=node(16), th=node(17), m=node(18)
+
+create (cvw{name:'pair'})
+create (csw{name:"Chandra Sekar's Pair"})
+create cs-[:wife{crono:1,rel:'husband'}]->cvw
+create csw-[:husband{crono:1,rel:'wife'}]->cvw
+create cvw-[:son{crono:1,rel:'father'}]->({name:'Sivakumar', alias:'Prabhakar'})
+create cvw-[:doughter{crono:2,rel:'father'}]->({name:'Gomathi'})
+
+create (pvh{name:'pair'})
+create (pgh{name:"Pongothai's Pair"})
+create pgh-[:wife{crono:1,rel:'husband'}]->pvh
+create pg-[:husband{crono:1,rel:'wife'}]->pvh
+create pvh-[:son{crono:1,rel:'mother'}]->({name:'Ramesh'})
+
+create (tvh{name:'pair'})
+create (thh{name:"Thilothamai's Pair"})
+create thh-[:wife{crono:1,rel:'husband'}]->tvh
+create th-[:husband{crono:1,rel:'wife'}]->tvh
+create tvh-[:son{crono:1,rel:'mother'}]->({name:'Arivarasu'})
+create tvh-[:doughter{crono:2,rel:'mother'}]->({name:'Jansi Rani'})
+
+create (mvh{name:'pair'})
+create (mh{name:"Mani's Pair"})
+create mh-[:wife{crono:1,rel:'husband'}]->mvh
+create m-[:husband{crono:1,rel:'wife'}]->mvh
+create mvh-[:son{crono:1,rel:'mother'}]->({name:'Ravi'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start pa=node(21), s=node(22), n=node(23), g=node(24)	
+
+create pvh
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+create dr-[:son{crono:1,rel:'father'}]->({name:'Dinesh'})
+create pr-[:son{crono:1,rel:'father'}]->({name:'Vasanth'})
+create rg-[:doughter{crono:1,rel:'father'}]->({name:'Ramya'})
+create rg-[:son{crono:2,rel:'father'}]->({name:'Sabari'})
+create rn-[:son{crono:1,rel:'mother'}]->({name:'Sathish'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+start sk=node(24), go=node(25), rm=node(26), av=node(27), jr=node(28)
+create sk-[:doughter{crono:1,rel:'father'}]->({name:'Vaishaly'})
+create sk-[:doughter{crono:2,rel:'father'}]->({name:'Varnika'})
+create go-[:son{crono:1,rel:'mother'}]->({name:'Vigneshwaar'})
+create go-[:son{crono:2,rel:'mother'}]->({name:'Viswesswaar'})
+create rm-[:son{crono:1,rel:'father'}]->({name:'Shoban'})
+create rm-[:doughter{crono:2,rel:'father'}]->({name:'Shobana'})
+create av-[:son{crono:1,rel:'father'}]->({name:'Sankar'})
+create av-[:son{crono:2,rel:'father'}]->({name:'Surya'})
+create jr-[:son{crono:1,rel:'mother'}]->({name:'Azhagia Nambi'})
+create jr-[:son{crono:2,rel:'mother'}]->({name:'Asok Kumar'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//	Need to fill with the Rakkipillar
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+create (ksn{name:'Kuppusamy Naidu'})
+create ksn-[:son{crono:1,rel:'father'}]->({name:'Varatharaja Naidu'})
+create ksn-[:doughter{crono:2,rel:'father'}]->({name:'Varathammal'})
+create ksn-[:doughter{crono:3,rel:'father'}]->({name:'To Find'});
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

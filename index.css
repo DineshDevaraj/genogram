@@ -1,0 +1,137 @@
+
+body{
+	background:url(images/canvas.jpg) fixed;
+}
+
+body *{
+	position:relative;	
+}
+
+input{
+	margin:auto;
+	margin-left:10px;
+}
+
+input[type='radio']{
+	margin:10px;
+}
+
+tr, td{
+	margin:0;
+	padding:0;
+}
+
+form, table{
+	margin:0;
+	width:100%;
+}
+
+.outer{	
+	width:443px;
+	margin:12.5% auto;
+}
+
+.outer>.title{	
+	font-size:24px;
+	text-align:center;
+	margin-bottom:25px;
+	background:rgb(89, 178, 89);
+	color:white;
+	border-radius:5px;
+	.border:3px solid gray;
+	box-shadow:0 0 10px 5px gray;
+	padding:5px;
+	padding-bottom:8px;
+	cursor:default;
+}
+
+.forms tr{
+	height:35px;
+}
+
+.forms input[type='button']{
+	margin:0;
+	border:0;
+	padding:0;	
+	color:white;	
+	width:225px;
+	height:30px;
+	outline:none;
+	font-size:15px;
+	box-shadow:none;
+}
+
+.forms input[class='si']{
+	z-index:2;
+	background:url(images/signin.png) no-repeat;
+	background-size:100% 100%;
+}
+
+.forms input[class='su']{
+	margin-left:-11px;
+	background:url(images/signup.png) no-repeat;
+	background-size:100% 100%;
+	z-index:1;
+}
+
+.forms .error{
+	color:blue;
+}
+
+.forms .error form{
+	margin-bottom:15px;
+}
+
+.forms .error form *{
+	color:red;
+}
+
+.forms .error form tr{
+	height:25px;
+}
+
+.content{	
+	.border:20px solid rgba(23, 23, 23, 0.5);
+	box-shadow:0px 0px 10px 3px gray;
+	border-top:none;
+	z-index:0;
+	background:white;
+	width:439px;
+	margin:auto;
+}
+
+.content .signin input[type='text'], 
+.content .signin input[type='password']{
+	width:335px;
+}
+
+.content .signup input[type='text']{
+	width:355px;
+}
+
+.signin{	
+	.width:296px;	
+	margin:auto;
+	padding:10px;	
+}
+
+.signin .title{
+	color:purple;
+}
+
+.signin .error form{
+	margin-left:80px;
+}
+
+.signup{
+	padding:10px;
+	display:none;
+}
+
+.signup .title{
+	color:brown;
+}
+
+.signup .error form{
+	margin-left:60px;
+}
